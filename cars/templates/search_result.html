@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="d-flex flex-wrap">
+  {% for car in object_list %}
+    <div class="card m-3" style="width: 18rem;">
+        <div class="card-body list-group-item-info">
+            <h5 class="card-title text-center">{{ car.company }} - {{ car.model }}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-light"><strong>Год выпуска:</strong> {{ car.year}}</li>
+            <li class="list-group-item bg-light"><strong>Коробка передач:</strong>
+                {% if car.transmission == 1 %}
+                  механика (1)
+                {% elif car.transmission == 2 %}
+                  автомат (2)
+                {% elif car.transmission == 3 %}
+                  робот (3)
+                {% endif %}</li>
+            <li class="list-group-item bg-light"><strong>Цвет:</strong> {{ car.color }}</li>
+        </ul>
+    </div>
+  {% endfor %}
+  </div>
+{% endblock %}
