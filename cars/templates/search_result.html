@@ -6,6 +6,8 @@
     <div class="card m-3" style="width: 18rem;">
         <div class="card-body list-group-item-info">
             <h5 class="card-title text-center">{{ car.company }} - {{ car.model }}</h5>
+            <img src="/{{ car.image }}" class="card-img-top" alt="Фото {{ car.company }} - {{ car.model }}"
+            style="max-width: 250px; max-height: 180px;">
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item bg-light"><strong>Год выпуска:</strong> {{ car.year}}</li>
