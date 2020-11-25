@@ -77,6 +77,7 @@ WSGI_APPLICATION = 'homework.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# Настройки бд для локального запуска
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -84,6 +85,7 @@ WSGI_APPLICATION = 'homework.wsgi.application'
 #     }
 # }
 
+# Настройки бд для сервера
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
